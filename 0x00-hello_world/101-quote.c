@@ -1,7 +1,6 @@
 #include <unistd.h>
 /**
  * main - Entry point
- * this discription is for standard error
  *
  * Return : Always 1 (Success)
  */
