@@ -10,7 +10,7 @@ int main(void)
 	char git[] = "_putchar";
 	int n;
 
-	for (n = 0; n <= 8; n++)
+	for (n = 0; n <= 7; n++)
 	{
 		_putchar(git[n]);
 	}
