@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,9 +5,9 @@
  * this program prints an array of strings
  * Return: Always 0 (Success)
  */
+int _putchar(char);
 int main(void)
 {
-	int _putchar(char);
 	char git[] = "_putchar";
 	int n;
 
