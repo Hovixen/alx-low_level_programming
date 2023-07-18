@@ -5,7 +5,6 @@
  * this program prints an array of strings
  * Return: Always 0 (Success)
  */
-int _putchar(char);
 int main(void)
 {
 	char git[] = "_putchar";
