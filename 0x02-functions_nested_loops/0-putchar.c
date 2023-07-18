@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <main.h>
 /**
  * main - Entry point of the code now.
  * this program prints an array of strings
@@ -9,7 +10,7 @@ int main(void)
 	char git[7] = "_putchar";
 	int n;
 
-	for (n = 0; n <= 6; n++)
+	for (n = 0; n <= 7; n++)
 	{
 		putchar(git[n]);
 	}
