@@ -10,11 +10,13 @@
 
 int _islower(int c)
 {
-	for (c = 65; c <= 90; c++)
+	if (c >= 97 && c <= 122)
 	{
-		if (c > 65)
-			return (1);
-		else
-			return (0);
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 	_putchar('\n');
 }
