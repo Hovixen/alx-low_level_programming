@@ -7,10 +7,10 @@
  */
 int main(void)
 {
-	char git[7] = {"_putchar"};
+	char git[] = "_putchar";
 	int n;
 
-	for (n = 0; n <= 7; n++)
+	for (n = 0; n <= 8; n++)
 	{
 		_putchar(git[n]);
 	}

@@ -2,6 +2,6 @@
 #define main_h
 
 
-int _putchar()
+int _putchar();
 
 #endif
