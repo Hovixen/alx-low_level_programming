@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -7,6 +8,7 @@
  */
 int main(void)
 {
+	int _putchar(char);
 	char git[] = "_putchar";
 	int n;
 
