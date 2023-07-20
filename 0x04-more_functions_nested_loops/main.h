@@ -3,7 +3,7 @@
 
 int print_sign(int n);
 int _abs(int);
-int print_last_digit(int)
+int print_last_digit(int);
 int _putchar(char);
 int _islower(int c);
 int add(int a, int b);
