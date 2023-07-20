@@ -10,7 +10,11 @@
 void print_most_numbers(void)
 {
 	char n[] = "01356789";
+	int i;
 
-	_putchar(n);
+	for (i = 0; i <= 8; i++)
+	{
+		_putchar(n[i]); /*This prints the value of 'n' when 'i' iterates it*/
+	}
 	_putchar('\n');
 }
