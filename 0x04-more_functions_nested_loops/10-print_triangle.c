@@ -2,8 +2,8 @@
 
 /**
  * print_triangle - prints a triangle.
- * @size: numbers of lines.
- * Return: no return.
+ * @size: the defined size
+ * Return: void.
  */
 void print_triangle(int size)
 {
