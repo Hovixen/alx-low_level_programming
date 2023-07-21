@@ -13,6 +13,8 @@ void print_diagonal(int n)
 {
 	int j,  k; /*this declears row(j) and column(k)*/
 
+	if (n <= 0)
+		_putchar('\n');
 	for (j = 0; j < n; j++)
 	{
 		for (k = 0; k < j; k++)
@@ -20,8 +22,6 @@ void print_diagonal(int n)
 			_putchar(' ');
 		}
 		_putchar('\\');
-		if (j < (n - 1))
-			_putchar('\n');
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
