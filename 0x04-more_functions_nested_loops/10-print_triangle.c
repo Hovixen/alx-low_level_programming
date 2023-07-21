@@ -9,7 +9,7 @@ void print_triangle(int size)
 {
 	int n, j;
 
-	for (n = 0; n < size; i++)
+	for (n = 0; n < size; n++)
 	{
  /**
  * The first inner loop ends by giving j the value of j++
