@@ -1,11 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
+ * _atoi - Turns integers to string
+ * @s: the integer 
  *
  * Return: Always 0.
  */
-int main(void)
+int _atoi(char *s)
 {
 	int n;
 
