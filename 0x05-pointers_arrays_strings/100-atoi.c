@@ -1,31 +1,30 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _atoi - Turns integers to string
- * @s: the integer 
+ * @s: the string mainly to be converted
  *
  * Return: Always 0.
  */
 int _atoi(char *s)
 {
-	int n;
+	int var, sign, n;
 
-	n = _atoi("xd-xds5");
-	/*n = 1000000000;*/
-	printf("%d\n", n);
-	n = _atoi("-402");
-	printf("%d\n", n);
-	n = _atoi("          ------++++++-----+++++--98");
-	printf("%d\n", n);
-	n = _atoi("214748364");
-	printf("%d\n", n);
-	n = _atoi("0");
-	printf("%d\n", n);
-	n = _atoi("Suite 402");
-	printf("%d\n", n);
-	n = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-	printf("%d\n", n);
-	n = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-	printf("%d\n", n);
-	return (0);
+	var = 0;
+	sign = 1;
+
+	for (n = 0; s[n] != '\0' && !(s[n] >= '0' && s[n] <= '9'); n++)
+	{
+		if (s[n] == '-')
+			sign = sign * -1;
+	}
+	for (n = 0; s[n] != 0; n++)
+	{
+		if (s[n] > '0' && s[n] <= '9')
+			var = var * 10 + sign * (s[n] - '0');
+		if (var != 0 && !(s[n] >= '0' && s[n] <= '9'))
+			return (var);
+	}
+	return (var);
+
 }
