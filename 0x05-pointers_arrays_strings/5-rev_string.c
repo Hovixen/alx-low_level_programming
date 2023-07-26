@@ -14,9 +14,6 @@ void rev_string(char *s)
 		len++;
 	}
 
-	char *str;
-
-	str = s;
 	int beginning = 0;
 	int end = len - 1;
 	char temp;
@@ -26,7 +23,7 @@ void rev_string(char *s)
 		temp = s[beginning];
 		s[beginning] = s[end];
 		s[end] = temp;
-		start++;
+		beginning++;
 		end--;
 	}
 	_putchar ('\n');
