@@ -14,16 +14,16 @@ void rev_string(char *s)
 		len++;
 	}
 
-	int beginning = 0;
+	int start = 0;
 	int end = len - 1;
 	char temp;
 
 	while (beginning < end)
 	{
-		temp = s[beginning];
-		s[beginning] = s[end];
+		temp = s[start];
+		s[start] = s[end];
 		s[end] = temp;
-		beginning++;
+		start++;
 		end--;
 	}
 	_putchar ('\n');
