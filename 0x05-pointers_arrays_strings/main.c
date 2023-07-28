@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void puts2(char *);
+void print_array(int *, int);
 
 /**
  * main - check the code for Holberton School students.
@@ -9,9 +9,11 @@ void puts2(char *);
  */
 int main(void)
 {
-	char *str;
+	int array[1] = {
+		98
+	};
 
-	str = "Holberton!\0Holberton";
-	puts2(str);
+	print_array(array, 0);
+	print_array(array, -1);
 	return (0);
 }
