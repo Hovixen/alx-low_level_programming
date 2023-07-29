@@ -22,7 +22,7 @@ int _atoi(char *s)
 	{
 		if (s[n] > '0' && s[n] <= '9')
 			var = var * 10 + sign * (s[n] - '0');
-		if (var != 0 && !(s[n] >= '0' && s[n] <= '9'))
+		else
 			return (var);
 	}
 	return (var);
