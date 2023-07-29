@@ -11,7 +11,7 @@ char *_strcat(char *dest, char *src)
 
 	while (*(dest + count) != '\0')
 	{
-		count++;
+		len_dest++;
 	}
 
 	while (*(src + len_src) != '\0')
