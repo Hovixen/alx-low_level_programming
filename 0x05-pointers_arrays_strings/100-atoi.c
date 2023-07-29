@@ -20,7 +20,7 @@ int _atoi(char *s)
 	}
 	for (n = 0; s[n] != '\0'; n++)
 	{
-		if (s[n] > '0' && s[n] <= '9')
+		if (s[n] >= '0' && s[n] <= '9')
 			var = var * 10 + sign * (s[n] - '0');
 		else
 			return (var);
