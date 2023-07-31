@@ -8,15 +8,12 @@
 
 char *_strchr(char *s, char c)
 {
-	unsigned int n = 0; /*This is the count of the lenght of the string*/
+	unsigned int i = 0;
 
-	while (*(s + n) != '\0')
-	{
-		if (*(s + n) == c)
-		{
-			return (s);
-		}
-		s++;
-	}
+	for (; *(s + i) != '\0'; i++)
+		if (*(s + i) == c)
+			return (s + i);
+	if (*(s + i) == c)
+		return (s + i);
 	return ('\0');
 }
