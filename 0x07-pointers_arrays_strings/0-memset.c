@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * _memset - Function fills first n byte of the memory area
@@ -9,7 +9,7 @@
  * @n: number of memory space to be filled.
  */
 
-char *_memset(char *s, char b, int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i = 0; /*This is for the iteration*/
 
