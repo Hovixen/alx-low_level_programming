@@ -21,7 +21,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 		if (*(s + len_s) == *(accept + len_accept))
-			return (s);
+			return (s + len_s);
 	}
 	return ('\0');
 }
