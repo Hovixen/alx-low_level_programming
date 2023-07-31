@@ -8,7 +8,7 @@
 
 char *_strchr(char *s, char c)
 {
-	int n = 0; /*This is the count of the lenght of the string*/
+	unsigned int n = 0; /*This is the count of the lenght of the string*/
 
 	while (*(s + n) != '\0')
 	{
