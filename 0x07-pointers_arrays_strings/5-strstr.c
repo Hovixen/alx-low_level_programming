@@ -11,12 +11,12 @@
 char *_strstr(char *haystack, char *needle)
 {
 	unsigned int hay, need;
-	
+
 	for (hay = 0; haystack[hay] != '\0'; hay++)
 	{
 		for (need = 0; needle[need] != '\0'; need++)
 		{
-			if (haystack[hay + need] == needle[need])
+			if (haystack[hay + need] != needle[need])
 			{
 				break;
 			}
