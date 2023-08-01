@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _strstr - finds the first occurrence of the substring.
@@ -29,4 +29,3 @@ char *_strstr(char *haystack, char *needle)
 	}
 	return (0);
 }
-
