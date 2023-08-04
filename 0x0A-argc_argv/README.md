@@ -1,14 +1,11 @@
 # Argc, Argv
-___
-
 ## General
 How to use arguments passed to your program
 What are two prototypes of main that you know of, and in which case do you use one or the other
 How to use __attribute__((unused)) or (void) to compile functions with unused variables or parameters
 ___
 # Requirements
-___
-##General
+## General
 * Allowed editors: `vi`, `vim`, `emacs`
 * All your files will be compiled on `Ubuntu 20.04 LTS` using `gcc`, using the options `-Wall` `-Werror` `-Wextra` `-pedantic` `-std=gnu89`
 * All your files should end with a new line
@@ -24,7 +21,7 @@ ___
 ___
 | File name | Description |
 | --------- | ----------- |
-| 0-whatsmyname.c | Prints a program name |
+| `0-whatsmyname.c` | Prints a program name |
 | `1-args.c` | Prints number of arguments passed to the program | 
 | `2-args.c` | Prints all argruments received |
 | `3-mul.c` | Multiplies two numbers |
