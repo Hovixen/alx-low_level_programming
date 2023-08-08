@@ -1,14 +1,11 @@
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * *argstostr - Function concatenates arguments passed in command
- *
  * @ac: integer count of command
  * @av: pointer of array of string command
  * Return: return pointer
  */
-
 char *argstostr(int ac, char **av)
 {
 	int len = 0;/* used to find the size of memory*/
@@ -18,9 +15,7 @@ char *argstostr(int ac, char **av)
 	char *str;/*pointer to the allocated memory*/
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
 	/*loop through to get the size*/
 	for (i = 0; i < ac; i++)
 	{
@@ -32,14 +27,10 @@ char *argstostr(int ac, char **av)
 		}
 		len++;/*include a new line*/
 	}
-	/*allocate memory and to allocate null terminator*/
-	str = (char *)malloc(sizeof(char *) * (len + 1));
+	str = (char *)malloc(sizeof(char)  * (len + 1));/*alloc mem + null*/
 	if (ar == NULL)
-	{
 		return (NULL);
-	}
-	/*copying to allocated memory with new lines*/
-	for (i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)/*copying to alloc mem with new lines*/
 	{
 		ar = av[i];
 		while (*ar != '\0')
