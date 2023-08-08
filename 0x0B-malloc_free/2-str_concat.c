@@ -16,7 +16,7 @@ char *str_concat(char *s1, char *s2)
 	char *ar;/* pointer that stores the newly allocated memory */
 	unsigned int i, n;
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
