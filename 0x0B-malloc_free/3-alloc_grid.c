@@ -11,7 +11,7 @@
 
 int **alloc_grid(int width, int height)
 {
-	int w, h;
+	int w, h;/*used to iterate through for allocating memory*/
 	int i; /*used to iltereate through to free the memory allocation */
 	int **ar;/* pointer that stores the newly allocated memory */
 
