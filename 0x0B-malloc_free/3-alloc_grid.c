@@ -15,7 +15,7 @@ int **alloc_grid(int width, int height)
 	int i; /*used to iltereate through to free the memory allocation */
 	int **ar;/* pointer that stores the newly allocated memory */
 
-	if (width <=0 || height <= 0)/*check for negative rows  or column */
+	if (width <= 0 || height <= 0)/*check for negative rows  or column */
 	{
 		return (NULL);
 	}
