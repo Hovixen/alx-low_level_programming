@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	{
 		n++;
 	}
-	n++;
+	n++;/* Adds the null terminator */
 	sr = (char *)malloc(sizeof(char) * n);
 	if (sr == NULL)
 	{
