@@ -9,7 +9,8 @@
 void *malloc_checked(unsigned int b)
 {
 	/*This void is used when the type of pointer is not known*/
-	void *ptr = malloc(sizeof(b));
+	void *ptr = malloc(b);
+
 	if (ptr == NULL)
 		exit(98);
 	return (ptr);
