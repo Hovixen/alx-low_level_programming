@@ -9,58 +9,57 @@
 
 char **strtow(char *str)
 {
-	int i, w_start, w_len;
-	int n = 0;/*iteration by words*/
+	int i, m, w_start, w_len;
+	int n = 0;/*words index*/
 	int size = 0;
-	char **ar;
+	char **ar = NULL;
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	while (str[n] != '\0')/*count words*/
+	for (i = 0; str[i] != '\0';)/*count words*/
 	{
-		if (str[n] != ' ')
+		while (str[i] == ' ')
+			i++;
+		if (str[i] != ' ')
 		{
 			size++;
-			while ((str[n] != ' ') && (str[n] != '\0'))
+			while ((str[i] != ' ') && (str[i] != '\0'))
 			{
-				n++;
+				i++;
 			}
 		}
-		else
-			n++;
 	}
+	if (size == 0)
+		return (NULL);
 	ar = (char **)malloc(sizeof(char *) * (size + 1));
 	if (ar == NULL)
 		return (NULL);
-	n = 0;/*reseting n back to 0 and tokenizing the words and length*/
-	while (str[n] != '\0')
+	for (n = 0, i = 0; str[i] != '\0';)
 	{
-		if (str[n] == ' ')
-			n++;
-		w_start = n;
-		w_len = 0;
-		while (str[n] != '\0' && str[n] != ' ')
+		while (str[i] == ' ')
+			i++;
+		if (str[i] != '\0')
 		{
-			n++;
-			w_len++;
-		}
-		ar[size - size] = (char *)malloc(sizeof(char) * (w_len + 1));
-		if (ar[size - size] == NULL)
-		{
-			for (i = 0; i < size; i++)
+			w_start = i;
+			while (str[i] != '\0' && str[n] != ' ')
+				i++;
+			w_len = i - w_start;
+			ar[n] = (char *)malloc(sizeof(char) * (w_len + 1));
+			if (ar[n] == NULL)
 			{
-				free(ar[i]);
+				for (m = 0; m < n; m++)
+					free(ar[m]);
+				free(ar);
+				return (NULL);
 			}
-			free(ar);
-			return (NULL);
+			for (m = 0; m < w_len; m++)
+			{
+				ar[n][m] = str[w_start + m];
+			}
+			ar[n][w_len] = '\0';
+			n++;
 		}
-		for (i = 0; i < w_len; i++, w_start++)
-		{
-			ar[size - size][i] = str[w_start];
-		}
-		ar[size - size][w_len] = '\0';
-		size++;
 	}
-	ar[size - size] = NULL;
+	ar[n] = NULL;
 	return (ar);
 }
