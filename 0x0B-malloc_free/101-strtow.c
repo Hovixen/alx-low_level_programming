@@ -1,20 +1,16 @@
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * **strtow - function splits strings into words
  * @str: string argument
  * Return: returns pointer to an array of strings
  */
-
 char **strtow(char *str)
 {
-	int i, m, w_start, w_len;
-	int n = 0;/*words index*/
-	int size = 0;
+	int i, m, w_start, w_len, n = 0,/*words index*/size = 0;
 	char **ar = NULL;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || *str == ' ')
 		return (NULL);
 	for (i = 0; str[i] != '\0';)/*count words*/
 	{
@@ -24,9 +20,7 @@ char **strtow(char *str)
 		{
 			size++;
 			while ((str[i] != ' ') && (str[i] != '\0'))
-			{
 				i++;
-			}
 		}
 	}
 	if (size == 0)
