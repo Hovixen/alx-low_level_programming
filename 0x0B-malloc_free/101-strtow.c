@@ -41,7 +41,7 @@ char **strtow(char *str)
 		if (str[i] != '\0')
 		{
 			w_start = i;
-			while (str[i] != '\0' && str[n] != ' ')
+			while (str[i] != '\0' && str[i] != ' ')
 				i++;
 			w_len = i - w_start;
 			ar[n] = (char *)malloc(sizeof(char) * (w_len + 1));
