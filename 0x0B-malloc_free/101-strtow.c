@@ -16,7 +16,7 @@ char **strtow(char *str)
 	{
 		while (str[i] == ' ')
 			i++;
-		if (str[i] != ' ')
+		if (str[i] != '\0')
 		{
 			size++;
 			while ((str[i] != ' ') && (str[i] != '\0'))
