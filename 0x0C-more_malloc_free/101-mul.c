@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _isdigit - function checkes for digits.
@@ -66,8 +67,8 @@ int main(int argc, char  *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	ar1 = (char *)malloc(sizeof(argv[1]));
-	ar2 = (char *)malloc(sizeof(argv[2]));
+	ar1 = (char *)malloc(strlen(argv[1]) + 1);
+	ar2 = (char *)malloc(strlen(argv[2]) + 1);
 	if (ar1 == NULL || ar2 == NULL)
 	{
 		printf("Memory allocation failed\n");
