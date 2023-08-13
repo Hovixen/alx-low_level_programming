@@ -38,17 +38,39 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
- * mul - function multiplies pointers
+ * mul - function multiplies pointers with huge values
  * @a: pointer argument
  * @b: pointer argument
  * Return: returns integer
  */
-int mul(char *a, char *b)
+char *mul(char *a, char *b)
 {
-	int mul_value = 0;
+	int digit1, digit2, resLen, i;
+	char *resStr;
+	int *mul_value = NULL;
 
-	mul_value = atoi(a) * atoi(b);
-	return (mul_value);
+	int len_a = strlen(a), len_b = strlen(b);
+	mul_value = calloc(len_a + len_b, sizeof(int));
+	for (int i = len_a - 1; i >= 0; i--)
+	{
+		for (int j = len_b - 1; j >= 0; j--)
+		{
+			digit1 = a[i] - '0';
+			digit2 = b[j] - '0';
+			mul_value[i + j + 1] += digit1 * digit2;
+			mul_value[i + j] += mul_value[i + j + 1] / 10;
+			mul_value[i + j + 1] %= 10;
+		}
+	}
+	resLen = len_a + len_b;
+	while (resLen > 0 && mul_value[resLen - 1] == 0)
+		resLen--;
+	resStr = malloc(resLen + 1);
+	for (i = 0; i < resLen; i++)
+		resStr[i] = mul_value[i] + '0';
+	resStr[resLen] = '\0';
+	free(mul_value);
+	return (resStr);
 }
 /**
  * main - multiplies two numbers
@@ -58,7 +80,7 @@ int mul(char *a, char *b)
  */
 int main(int argc, char  *argv[])
 {
-	int ab = 0;
+	char *ab = NULL;
 	char *ar1; /*pointer for memory allocation*/
 	char *ar2; /*pointer for memory allocation*/
 
@@ -82,8 +104,9 @@ int main(int argc, char  *argv[])
 		exit(98);
 	}
 	ab = mul(argv[1], argv[2]);
-	printf("%d\n", ab);
+	printf("%s\n", ab);
 	free(ar1);
 	free(ar2);
+	free(ab);
 	return (0);
 }
