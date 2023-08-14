@@ -19,4 +19,5 @@ ___
 | Filename | Description |
 | -------- | ----------- |
 | `object_like_macro.h` | Creates header file that defines a macro name SIZE |
-|
+| `pi.h` | Creates header file that defines a macro name PI |
+| `main.c` | Prints the file name it was compiled from |
