@@ -4,7 +4,7 @@
  * main - prints the file name it was compiled from
  * Return: always 0 success
  */
-#define FILE_NAME printf("%s\n",__FILE__)
+#define FILE_NAME printf("%s\n", __FILE__)
 int main(void)
 {
 	FILE_NAME;
