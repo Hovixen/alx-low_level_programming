@@ -21,4 +21,5 @@ ___
 | `object_like_macro.h` | Creates header file that defines a macro name SIZE |
 | `pi.h` | Creates header file that defines a macro name PI |
 | `main.c` | Prints the file name it was compiled from |
-| `sum.h` | Macro computes the sum of number |
+|  `function_like_macro.h` | Macro that computes absolute value of a number |
+| `sum.h` | Macro that computes the sum of two numbers |
