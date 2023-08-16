@@ -8,7 +8,7 @@
  * Return: returns void
  */
 
-void print_name(char *name, void (*f)(char*name))
+void print_name(char *name, void (*f)(char *name))
 {
 	f(name);
 }
