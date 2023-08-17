@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	if (sign == NULL)
 	{
 		printf("Error\n");
-		return (99);
+		exit(100);
 	}
 	result = (*get_op_func(sign))(a, b);
 	printf("%d\n", result);
