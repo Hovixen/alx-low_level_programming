@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int result = 0, a = 0, b = 0;
 	int (*f)(int, int);/*function pointer*/
-	char *sign;
+	char sign;
 
 	/*checks the number of arguments passed*/
 	if (argc != 4)
@@ -34,8 +34,8 @@ int main(int argc, char *argv[])
 
 	/*a = atoi(argv[1]);
 	b = atoi(argv[3]);*/
-	sign = argv[2];
-	if ((sign == NULL)) /*|| ((*sign == '/' || *sign == '%') && b == 0))*/
+	sign = *argv[2];
+	if (!sign) /*|| ((*sign == '/' || *sign == '%') && b == 0))*/
 	{
 		printf("Error\n");
 		exit(100);
