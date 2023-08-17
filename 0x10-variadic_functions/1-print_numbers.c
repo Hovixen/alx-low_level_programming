@@ -15,9 +15,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	int value;
 	va_list num;/*declaring list for num*/
-	
-	va_start(num, n);
 
+	va_start(num, n);
 	for (i = 0; i < n; i++)
 	{
 		value = va_arg(num, int);/*get next argument of type int*/
