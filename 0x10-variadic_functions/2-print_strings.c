@@ -15,8 +15,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *ar; /*character (string) value*/
 	va_list num;
-	va_start(num, n);
 
+	va_start(num, n);
 	for (i = 0; i < n; i++)
 	{
 		ar = va_arg(num, char *);/*get the next parameter value*/
