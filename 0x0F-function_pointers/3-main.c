@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "cal.h"
+#include "3-calc.h"
 
 /**
  * main - Function calculates simple operation of integers
