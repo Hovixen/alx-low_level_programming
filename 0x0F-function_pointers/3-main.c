@@ -13,11 +13,19 @@ int main(int argc, char *argv[])
 	int result = 0, a = 0, b = 0;
 	char *sign;
 
+	/*checks the number of arguments passed*/
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
+	/*checks if it is only one operator sign that was used*/
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n");
+		exit (99);
+	}
+
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	sign = argv[2];
