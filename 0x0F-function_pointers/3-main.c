@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	if (sign == NULL || ((*sign == '/' || *sign == '%') && b == 0))
 	{
 		printf("Error\n");
-		exit(100);
+		exit(98);
 	}
 	result = (*get_op_func(sign))(a, b);
 	printf("%d\n", result);
