@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int result = 0, a = 0, b = 0;
-	int (*sign)(int, int);/**function pointer declaration*/
+	char *sign = NULL;/**function pointer declaration*/
 
 	/*checks the number of arguments passed*/
 	if (argc != 4)
@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
 
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	sign = (*get_op_func(argv[2]));
+	sign = argv[2];
 	if (sign == NULL || b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	result = sign(a, b);
+	result = (*get_op_func(sign))(a, b);
 	printf("%d\n", result);
 	return (0);
 }
