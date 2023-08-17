@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "3-calc.h"
 
 /**
@@ -21,7 +20,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	/*checks if it is only one operator sign that was used*/
-	if (strlen(argv[2]) != 1)
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
