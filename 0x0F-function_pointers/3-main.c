@@ -16,7 +16,12 @@ int main (int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
+	}
+	if (argv[1] != NULL || argv[2] != NULL)
+	{
+		printf("Error\n");
+		exit(99);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
