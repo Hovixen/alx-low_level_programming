@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int result = 0, a = 0, b = 0;
-	/*int (*f)(int, int)*function pointer*/
+	int (*f)(int, int);/*function pointer*/
 	char *sign;
 
 	/*checks the number of arguments passed*/
@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
 	/*a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	sign = argv([2]);*/
+	f = get_op_func(argv[2]);
 
 	/*checks if it is only one operator sign that was used*/
 	if (argv[2][1] != '\0')
@@ -41,7 +42,7 @@ int main(int argc, char *argv[])
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	result = (get_op_func(sign))(a, b);
+	result = f(a, b);
 	printf("%d\n", result);
 	return (0);
 }
