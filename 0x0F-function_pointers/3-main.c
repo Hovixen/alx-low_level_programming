@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	sign = argv[2];
-	if (sign == NULL || ((*sign == '/' || *sign == '%') && b == 0))
+	if (sign == NULL)
 	{
 		printf("Error\n");
 		exit(98);
