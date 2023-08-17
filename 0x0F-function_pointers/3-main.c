@@ -8,7 +8,7 @@
  * @argv: pointer to the value of comand argument
  * Return: returns 0 success.
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int result = 0, a = 0, b = 0;
 	char *sign;
@@ -18,7 +18,7 @@ int main (int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[1] != NULL || argv[2] != NULL)
+	if (argv[1] != NULL && argv[2] != NULL)
 	{
 		printf("Error\n");
 		exit(99);
