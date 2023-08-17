@@ -12,7 +12,7 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	int i = 0;/* for iteration*/
+	unsigned int i = 0;/* for iteration*/
 
 	op_t ops[] = {
 		{"+", op_add},
