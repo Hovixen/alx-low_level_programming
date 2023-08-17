@@ -29,10 +29,10 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 	sign = argv[2];
-	if (sign == NULL)
+	if ((sign == NULL) || ((*sign == '/' || *sign == '%') && b == 0))
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 	result = (*get_op_func(sign))(a, b);
 	printf("%d\n", result);
