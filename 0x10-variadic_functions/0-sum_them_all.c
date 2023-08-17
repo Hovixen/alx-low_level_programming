@@ -10,10 +10,10 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	int i, value, sum = 0;
+	va_list in_var;
 
 	if (n == 0)
 		return (0);
-	va_list in_var;
 	va_start(in_var, n);
 
 	for (i = 0; i < n; i++)
