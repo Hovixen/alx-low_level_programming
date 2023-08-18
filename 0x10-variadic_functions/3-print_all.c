@@ -11,12 +11,12 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
 	va_list args;/*initializing the list argument*/
-	/*va_start(args, format);*/
 	char c;
 	int i_val;/*, separator_indicator = 0;*/
 	float f_val;
 	char *s_val;
 	int separator_indicator = 0;
+
 	va_start(args, format);
 	while (format && format[i])
 	{
