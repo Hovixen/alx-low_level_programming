@@ -18,7 +18,7 @@ void print_all(const char * const format, ...)
 	char *s_val;
 	/*int separator_indicator = 0;*/
 	va_start(args, format);
-	while (format != 0 && format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		c = format[i];
 		/*if (separator_indicator != 0)
