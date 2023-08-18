@@ -13,7 +13,7 @@ void print_all(const char * const format, ...)
 	va_list args;/*initializing the list argument*/
 	/*va_start(args, format);*/
 	char c;
-	int i_val, separator_indicator = 0;
+	int i_val;/*, separator_indicator = 0;*/
 	float f_val;
 	char *s_val;
 	/*int separator_indicator = 0;*/
@@ -21,8 +21,8 @@ void print_all(const char * const format, ...)
 	while (format != 0 && format[i] != '\0')
 	{
 		c = format[i];
-		if (separator_indicator != 0)
-			printf(", ");
+		/*if (separator_indicator != 0)
+			printf(", ");*/
 		switch (c)
 		{
 			case 'c':
@@ -46,7 +46,10 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s_val);
 				break;
-		} separator_indicator = 1, i++;
+		} /*separator_indicator = 1, i++;*/
+		if (format[i + 1])
+		printf(", ");
+		i++;
 	}
 	va_end(args), printf("\n");
 }
