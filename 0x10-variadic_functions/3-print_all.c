@@ -16,11 +16,13 @@ void print_all(const char * const format, ...)
 	int i_val;/*, separator_indicator = 0;*/
 	float f_val;
 	char *s_val;
-	/*int separator_indicator = 0;*/
+	int separator_indicator = 0;
 	va_start(args, format);
 	while (format && format[i])
 	{
 		c = format[i];
+		if (separator_indicator != 0)
+			printf(", ");
 		switch (c)
 		{
 			case 'c':
@@ -44,8 +46,6 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s_val);
 				break;
-		} /*separator_indicator = 1, i++;*/
-		if (format[i + 1])
-			printf(", "), i++;
+		} separator_indicator = 1, i++;
 	} va_end(args), printf("\n");
 }
