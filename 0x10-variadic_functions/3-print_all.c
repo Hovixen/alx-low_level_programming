@@ -9,7 +9,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	va_list args;/*initializing the list argument*/
 	/*va_start(args, format);*/
 	char c;
@@ -36,6 +36,7 @@ void print_all(const char * const format, ...)
 			case 'f':
 				f_val = va_arg(args, double);/*float being promoted to a double*/
 				printf("%f", f_val);
+				break;
 			case 's':
 				s_val = va_arg(args, char *);
 				if (s_val == NULL)
@@ -44,9 +45,8 @@ void print_all(const char * const format, ...)
 					break;
 				}
 				printf("%s", s_val);
-		} separator_indicator = 1;
-		i++;
+				break;
+		} separator_indicator = 1, i++;
 	}
-	va_end(args);
-	printf("\n");
+	va_end(args), printf("\n");
 }
