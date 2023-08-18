@@ -21,8 +21,6 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		c = format[i];
-		/*if (separator_indicator != 0)
-			printf(", ");*/
 		switch (c)
 		{
 			case 'c':
@@ -48,8 +46,6 @@ void print_all(const char * const format, ...)
 				break;
 		} /*separator_indicator = 1, i++;*/
 		if (format[i + 1])
-		printf(", ");
-		i++;
-	}
-	va_end(args), printf("\n");
+		printf(", "),i++;
+	} va_end(args), printf("\n");
 }
