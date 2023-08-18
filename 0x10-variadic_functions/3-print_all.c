@@ -24,29 +24,25 @@ void print_all(const char * const format, ...)
 		c = format[i];
 		if (separator_indicator != 0)
 			printf(", ");
-
-		if (c == 'c')
+		switch (c)
 		{
-			i_val = va_arg(args, int); /*char being promoted to an int*/
-			printf("%c", i_val);
-		}
-		else if (c == 'i')
-		{
-			i_val = va_arg(args, int);
-			printf("%d", i_val);
-		}
-		else if (c == 'f')
-		{
-			f_val = va_arg(args, double);/*float being promoted to a double*/
-			printf("%f", f_val);
-		}
-		else if (c == 's')
-		{
-			s_val = va_arg(args, char *);
-			if (s_val == NULL)
-				printf("(nil)");
-			else
-				printf("%s", s_val);
+			case 'c':
+				i_val = va_arg(args, int); /*char being promoted to an int*/
+				printf("%c", i_val);
+				break;
+			case 'i':
+				i_val = va_arg(args, int);
+				printf("%d", i_val);
+				break;
+			case 'f':
+				f_val = va_arg(args, double);/*float being promoted to a double*/
+				printf("%f", f_val);
+			case 's':
+				s_val = va_arg(args, char *);
+				if (s_val == NULL)
+					printf("(nil)");
+				else
+					printf("%s", s_val);
 		}
 		separator_indicator = 1;
 		i++;
