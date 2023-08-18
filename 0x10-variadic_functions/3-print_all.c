@@ -13,11 +13,10 @@ void print_all(const char * const format, ...)
 	va_list args;/*initializing the list argument*/
 	/*va_start(args, format);*/
 	char c;
-	int i_val;
+	int i_val, separator_indicator = 0;
 	float f_val;
 	char *s_val;
-	int separator_indicator = 0;
-
+	/*int separator_indicator = 0;*/
 	va_start(args, format);
 	while (format != 0 && format[i] != '\0')
 	{
@@ -40,11 +39,12 @@ void print_all(const char * const format, ...)
 			case 's':
 				s_val = va_arg(args, char *);
 				if (s_val == NULL)
+				{
 					printf("(nil)");
-				else
-					printf("%s", s_val);
-		}
-		separator_indicator = 1;
+					break;
+				}
+				printf("%s", s_val);
+		} separator_indicator = 1;
 		i++;
 	}
 	va_end(args);
