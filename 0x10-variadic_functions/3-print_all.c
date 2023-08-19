@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <stddef.h>
 #include "variadic_functions.h"
 /**
  ** print_all - Function that prints anything.
@@ -11,7 +10,6 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0, separator_indicator = 0, n;
 	va_list args;/*initializing the list argument*/
-	int i_val /*separator_indicator = 0*/;
 	char c;
 	char *s_val;
 	const char format_str[] = "cifs";
@@ -19,21 +17,18 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	while (format && format[i])
 	{
-		c = format[i];
-		n = 0;
+		c = format[i], n = 0;
 		while (format_str[n])
 		{
 			if ((separator_indicator != 0) && c == format_str[n])
 			{
 				printf(", ");
-				break;
 			} n++;
 		}
 		switch (c)
 		{
-			case 'c':
-				i_val = va_arg(args, int); /*char being promoted to an int*/
-				printf("%c", i_val), separator_indicator = 1;
+			case 'c':/*char being promoted to an int*/
+				printf("%c", va_arg(args, int)), separator_indicator = 1;
 				break;
 			case 'i':/*i_val = va_arg(args, int);*/
 				printf("%d", va_arg(args, int)), separator_indicator = 1;
@@ -51,9 +46,6 @@ void print_all(const char * const format, ...)
 				}
 				printf("%s", s_val); /*separator_indicator = 1;*/
 				break;
-		}
-		/*separator_indicator = 1;*/
-		i++;
+		} i++;
 	} printf("\n"), va_end(args);
 }
-
