@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
 	va_list args;/*initializing the list argument*/
-	int separator_indicator = 0;
+	int i_val, separator_indicator = 0;
 	char c;
 	char *s_val;
 
@@ -24,8 +24,8 @@ void print_all(const char * const format, ...)
 		switch (c)
 		{
 			case 'c':
-				/*i_val = va_arg(args, int); *char being promoted to an int*/
-				printf("%c", va_arg(args, int)), separator_indicator = 1;
+				i_val = va_arg(args, int); /*char being promoted to an int*/
+				printf("%c", i_val), separator_indicator = 1;
 				break;
 			case 'i':
 				/*i_val = va_arg(args, int);*/
@@ -45,6 +45,8 @@ void print_all(const char * const format, ...)
 				printf("%s", s_val), separator_indicator = 1;
 				break;
 		}
+		if (c != 's' && !separator_indicator)
+			print (" ");
 		i++;
 	} va_end(args), printf("\n");
 }
