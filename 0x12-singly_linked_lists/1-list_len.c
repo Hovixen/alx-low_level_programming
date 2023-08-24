@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
  * list_len - function returns the number of nodes(elements) from a structure
- * @h: pointer variable argument to the structure
+ * @h: pointer variable argument to the node list
  * Return: returns the number of elements
  */
 
