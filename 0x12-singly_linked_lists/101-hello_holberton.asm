@@ -1,17 +1,16 @@
-section .data
+	SECTION .data
+msg:	db "Hello, Holberton", 0
+fmt:	db "%s", 10, 0
 
-	hello db "Hello, Holberton",0
-	newline db 10, 0 ; ASCII code for newline
-
-section .text
-	global main
+	SECTION .text
 	extern printf
-
+	global main
 main:
-	sub rsp, 8
-	mov rdi, hello
+	mov esi, msg
+	mov edi, fmt
+	mov eax, 0
 	call printf
-	mov rdi, newline
-	call printf
-	add rsp, 8
+
+	mov eax, 0
 	ret
+
