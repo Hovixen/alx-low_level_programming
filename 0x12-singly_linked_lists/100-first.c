@@ -8,6 +8,6 @@
 
 void __attribute__((constructor)) print_before_main()
 {
-	printf("You are beat! and yet, you must allow,\n"
+	printf("You're beat! and yet, you must allow,\n"
 			"I bore my house upon my back!\n");
 }
