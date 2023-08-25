@@ -1,6 +1,6 @@
 section .data
 
-	hello db "Hello, Holberton ",0
+	hello db "Hello, Holberton",0
 	newline db 10, 0 ; ASCII code for newline
 
 section .text
