@@ -15,8 +15,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 		return (0);
 	node->n = n;
 	node->next = *head;
-	*head = node
-	printf("%d\n", node->n);
-	free(node);
+	*head = node;
 	return (node);
 }
