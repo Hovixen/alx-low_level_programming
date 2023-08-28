@@ -2,7 +2,7 @@
 
 /**
  * print_list - Funciton prints all element of a list_t list.
- * @h: pointer to the node list
+ * @h: pointer to the node lis
  * Return: returns the count of the node made from the list_t.
  */
 

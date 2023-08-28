@@ -2,7 +2,7 @@
 
 /**
  * *add_node - Function adds a new node at the begining of the list
- * @head: pointer of the new node
+ * @head: pointer to the pointer of the head
  * @str: string member of the structure
  * Return: returns the address of the new element of Null if failed
  */
