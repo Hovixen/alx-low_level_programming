@@ -11,7 +11,7 @@ size_t listint_len(const listint_t *h)
 {
 	unsigned int n = 0;
 
-	while (h)
+	while (h != NULL)
 	{
 		n++;
 		h = h->next;
