@@ -3,6 +3,7 @@
 /**
  * listinit_len - functions prints the number of element
  * in a linked list
+ *
  * @h: pointer to the new node created
  * Return: returns the number of node in a list
  */
