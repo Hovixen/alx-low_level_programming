@@ -8,7 +8,7 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t *subnode;
+	listint_t *subnode; /*temporary node used to traverse the list*/
 	int nodeData = 0;
 
 	if (*head == NULL)
