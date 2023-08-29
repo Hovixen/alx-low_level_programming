@@ -10,7 +10,7 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	int i = 0; /*used to iterate the position of the node*/
+	unsigned int i = 0; /*used to iterate the position of the node*/
 	listint_t *subnode; /*temporary node used to traverse the list*/
 	listint_t *newNode; /*new node to be added*/
 
