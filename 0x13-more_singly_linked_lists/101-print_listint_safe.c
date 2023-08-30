@@ -8,7 +8,7 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t i = 0; /*used to count the number of nodes*/
+	unsigned int i = 0; /*used to count the number of nodes*/
 
 	if (head == NULL)
 		return (98);
