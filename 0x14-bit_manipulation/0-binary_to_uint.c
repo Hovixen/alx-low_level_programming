@@ -9,24 +9,17 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, n = 0; /*used for iteration*/
-	unsigned int result = 0;/*result of the exponential loop*/
-	unsigned int conv_int;
+	unsigned int i; /*used for iteration*/
+	unsigned int result = 0;/*result in decimal*/
+	/*unsigned int conv_int;*/
 
 	if (b == NULL)
 		return (0);
-	while (b[n] != '\0')
-		n++;
-	/*conv_int = malloc(sizeof(unsigned int) * n);*/
-	/*if (conv_int == '\0')*/
-		/*return (0);*/
-
 	for (i = 0; b[i] != '\0'; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
-		result = result * 2 + (b[i] - '0');
-		conv_int = result;
+		result = (result << 1) | (b[i] - '0');
 	}
-	return (conv_int);
+	return (result);
 }
