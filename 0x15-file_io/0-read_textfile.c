@@ -11,12 +11,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;/*file descriptor*/
 	size_t read_num = 0, write_num = 0;
-	char instance[letters + 1];
+	/*char instance[letters + 1];*/
+	char *instance;
 
 	if (filename == NULL)
 		return (0);
 	file = open(filename, O_RDONLY);
 	if (file == -1)
+		return (0);
+	instance = malloc(sizeof(char) * letters);
+	if (instance == NULL)
 		return (0);
 	read_num = read(file, instance, letters);
 	if (read_num == -1)
@@ -24,7 +28,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(file);
 		return (0);
 	}
-	instance[read_num] = '\0';
+	/*instance[read_num] = '\0';*/
 
 	write_num = write(STDOUT_FILENO, instance, read_num);
 	if (write_num == -1)
@@ -32,6 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 		close(file);
 	}
+	free(instance);
 	close(file);
 	return (write_num);
 }
