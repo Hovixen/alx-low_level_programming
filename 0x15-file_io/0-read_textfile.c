@@ -28,7 +28,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	write_num = write(STDOUT_FILENO, instance, read_num);
 	if (write_num == -1)
+	{
 		return (0);
+		close(file);
+	}
 	close(file);
 	return (write_num);
 }
