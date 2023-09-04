@@ -10,7 +10,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;/*file descriptor*/
-	ssize_t read_num = 0, write_num = 0;
+	size_t read_num = 0, write_num = 0;
 	char instance[letters + 1];
 
 	if (filename == NULL)
