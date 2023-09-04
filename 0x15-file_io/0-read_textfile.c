@@ -11,15 +11,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;/*file descriptor*/
 	ssize_t read_num = 0, write_num = 0;
-	char instance[letters + 1];
-	/*char *instance;*/
+	/*char instance[letters + 1]; malloc is preferred in alx checker*/
+	char *instance; /*array to store the buffering characters of the file*/
 
 	if (filename == NULL)
 		return (0);
 	file = open(filename, O_RDONLY);
 	if (file == -1)
 		return (0);
-	/*instance = malloc(sizeof(char) * letters);*/
+	instance = malloc(sizeof(char) * letters);
 	if (instance == NULL)
 		return (0);
 	read_num = read(file, instance, letters);
@@ -36,7 +36,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 		close(file);
 	}
-	/*free(instance);*/
+	free(instance);
 	close(file);
 	return (write_num);
 }
