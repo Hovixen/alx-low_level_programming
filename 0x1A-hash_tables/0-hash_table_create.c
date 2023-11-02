@@ -20,7 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* allocate memory to the array hash_node_t */
 	/* This hash_node_t array is in the struct hash_table_t */
-	newTable->array = malloc(sizeof(hash_table_t) * size);
+	newTable->array = malloc(sizeof(hash_table_t *) * size);
 	if (newTable->array == NULL)
 	{
 		return (NULL);
