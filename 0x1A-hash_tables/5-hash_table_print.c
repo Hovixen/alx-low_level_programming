@@ -1,5 +1,10 @@
 #include "hash_tables.h"
 
+/**
+ * hash_table_print - function prints the key/value pair of a hash table
+ * @ht: hash table to be printed
+ * Return: returns void
+ */
 
 void hash_table_print(const hash_table_t *ht)
 {
