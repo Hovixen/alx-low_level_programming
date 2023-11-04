@@ -3,7 +3,8 @@
 This Project was completed in studies for **Full Stack Software Engineering** at **ALX SE**. It aims to learn how to implement Hash Tables with **C language**.
 
 ## Technologies
-* C files are compiled using `gcc 9.8.0`
+* script written with `bash 5.0.17`
+* C files are compiled using `gcc 9.4.0`
 * Tested on Ubuntu 20.04 LTS
 
 ## Files
