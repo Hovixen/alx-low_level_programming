@@ -1,0 +1,3 @@
+all: school
+	school: *c
+	gcc -o $@ $^
